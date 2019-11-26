@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#container {
+    width: 1000px;
+    height: 500px;
+    margin: 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<iframe src="https://infogram.com/photography-1h7v4plw9gjd2k0?live" width = "1000" height = "1200">
+</iframe>
+
+<iframe src="https://infogram.com/box-office-earnings-vs-ratings-1hxj48z01p0r4vg?live" width = "1000" height = "680">
+</iframe>
+
+
+
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/js/themes/sand-signika.js"></script>
+
+<div id="container"></div>
+
+<div style="display:none">
+    <table id="freq" border="0" cellspacing="0" cellpadding="0">
+        <tr nowrap bgcolor="#CCCCFF">
+            
+        </tr>
+        <tr nowrap>
+            <th class="freq">Money</th>
+            <th class="freq">Salary</th>
+            <th class="freq">Est. Budget</th>
+            <th class="freq">Earn opening weekend</th>
+
+        </tr>
+        <tr nowrap>
+            <td class="dir">Iron Man 2(2010)</td>
+            <td class="data">400000</td>
+            <td class="data">200000000</td>
+            <td class="data">128122480</td>
+  
+        </tr>        
+        <tr nowrap>
+            <td class="dir">The Avengers(2012)</td>
+            <td class="data">6000000</td>
+            <td class="data">220000000</td>
+            <td class="data">207438708</td>
+   
+        </tr>
+        <tr nowrap>
+            <td class="dir">Avengers: Age of Ultron(2015)</td>
+            <td class="data">20000000</td>
+            <td class="data">250000000</td>
+            <td class="data">191271109</td>
+     
+        </tr>
+        <tr nowrap>
+            <td class="dir">Ghost in the Shell(2017)</td>
+            <td class="data">10000000</td>
+            <td class="data">110000000</td>
+            <td class="data">18676033</td>
+         
+        </tr>
+        <tr nowrap>
+            <td class="dir">Avengers: Endgame(2019)</td>
+            <td class="data">35000000</td>
+            <td class="data">356000000</td>
+            <td class="data">357115007</td>
+          
+        </tr>
+        <tr nowrap>
+            <td class="dir">Black Widow(2020)</td>
+            <td class="data">20000000</td>
+            <td class="data">0</td>
+            <td class="data">0</td>
+           
+        </tr>
+      
+ 
+    </table>
+</div>
+
+
+
+<script>
+// Parse the data from an inline table using the Highcharts Data plugin
+Highcharts.chart('container', {
+    data: {
+        table: 'freq',
+        startRow: 1,
+        endRow: 17,
+        endColumn: 7
+    },
+
+    chart: {
+        polar: true,
+        type: 'column'
+    },
+
+    title: {
+        text: 'Is Scarlett Johansson paid enough?'
+    },
+
+    subtitle: {
+        text: 'Comparing salary with estimated budget and opening weekend earining. Source: Imdb'
+    },
+
+    pane: {
+        size: '90%'
+    },
+
+    legend: {
+        align: 'right',
+        verticalAlign: 'top',
+        y: 90,
+        layout: 'vertical'
+    },
+
+    xAxis: {
+        tickmarkPlacement: 'on'
+    },
+
+    yAxis: {
+        min: 0,
+        endOnTick: false,
+        showLastLabel: true,
+        labels: {
+            formatter: function () {
+                return '$' + this.value;
+            }
+        },
+        reversedStacks: false
+    },
+
+    tooltip: {
+        valueSuffix: '$'
+    },
+
+    plotOptions: {
+        series: {
+            stacking: 'normal',
+            shadow: false,
+            groupPadding: 0,
+            pointPlacement: 'on'
+        }
+    }
+});
+
+</script>
+
+<iframe src="https://infogram.com/notes-1h1749zvo0md2zj?live" width = "1000" height = "1000">
+</iframe>
+
+
+</body>
+</html>
